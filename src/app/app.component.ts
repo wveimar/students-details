@@ -3,11 +3,12 @@ import { Component } from '@angular/core';
 import { FormsModule,FormControl, ReactiveFormsModule,FormBuilder } from '@angular/forms';
 import { RouterOutlet } from '@angular/router';
 import { NgbHighlight } from '@ng-bootstrap/ng-bootstrap';
+import { SideBarComponent } from './side-bar/side-bar.component';
 
 @Component({
   selector: 'students-details-root',
   standalone: true,
-  imports: [CommonModule,RouterOutlet,FormsModule,ReactiveFormsModule,NgbHighlight],
+  imports: [CommonModule,RouterOutlet,FormsModule,ReactiveFormsModule,NgbHighlight,SideBarComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -255,6 +256,9 @@ export class AppComponent {
 			"computer": 10
 		}
   ];
+  sidebarExpanded: boolean = true;
+
+
   constructor (
     private fb: FormBuilder,
     ){
