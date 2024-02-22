@@ -1,0 +1,9 @@
+<p>student-records works!</p>
+<ag-grid-angular
+  class="ag-theme-alpine"
+  (gridReady)="onGrindReady($event)"
+  [columnDefs]="columnDefs"
+  [rowData]="apiResponse"
+  style="height: 800px; width: 100%"
+>
+</ag-grid-angular>
